@@ -1,0 +1,50 @@
+---
+title: UI documentation
+---
+
+ <header>
+    	<h1 class="ui_h1">{{title}}</h1>
+</header>
+
+
+<h2 class="ui_h2">Form elements</h2>
+{{#with doc.forms}}
+<div class="ui_bloc">
+	<form action="" data-jsobj="[{'obj':'form'}]">
+
+
+	<section class="ui_sub_bloc">
+		<div class="ui_demo"><fieldset>
+					<legend><span>{{fieldset}}</span></legend>
+			</fieldset></div>
+
+		<div class="ui_doc">
+			documentation
+		</div>
+	</section>
+
+
+			<section class="ui_sub_bloc">
+        <div class="ui_demo">{{> input-text field1}}</div>
+        <div class="ui_doc">
+          documentation
+          <div class="hbs">
+            &#123;&#123;&gt; input-text field1&#125;&#125;
+          </div>
+        </div>
+      </section>
+
+			{{> checkbox-list options}}
+
+			{{> radios-list choices}}
+
+			{{> select select}}
+
+
+
+	<div class="actions">{{> button button}}</div>
+
+	</form>
+</div>
+{{/with}}
+

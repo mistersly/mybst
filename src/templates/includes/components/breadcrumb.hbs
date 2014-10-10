@@ -1,0 +1,13 @@
+<div class="maxw-site mauto prelative breadcrumb futura fsize8">
+	{{#with breadcrumb}}
+	<ul>{{#each links}}
+		<li>
+			<a {{#if main}}class="main"{{/if}} href="{{link}}">{{label}}</a>
+		</li>		
+		{{/each}}
+		{{#if back}}
+		<li class="breadcrumb-back" data-jsObj="[{'obj':'breadcrumb-back'}]"><a href="{{back.link}}">{{back.label}}</a></li>
+		{{/if}}
+	</ul>
+	{{/with}}
+</div>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html lang="fr" class="ie ie7 no-js"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie ie9 no-js"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>UI documentation</title>
+        <link rel="stylesheet" href="/_doc/css/doc.css">
+        <link rel="stylesheet" href="/_doc/css/prism.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/css/main-ie.css">
+    <![endif]-->
+        <script type="text/javascript" src="/js/lib/modernizr.custom.js"></script>
+    </head>
+    <body class="ui_body">
+        <header>
+            <h1 class="ui_h1">UI documentation</h1>
+        </header>
+        <h2 class="ui_h2">Form elements</h2>
+        <div class="ui_bloc">
+            <form action="" data-jsobj="[{'obj':'form'}]">
+                <section class="ui_sub_bloc">
+                    <div class="ui_demo">
+                        <fieldset>
+                            <legend>
+                                <span>fieldset legend</span>
+                            </legend>
+                        </fieldset>
+                    </div>
+                    <div class="ui_doc">
+                        documentation
+                    </div>
+                </section>
+                <section class="ui_sub_bloc">
+                    <div class="ui_demo">
+                        <div class="input-text">
+                            <label for="email">votre email
+                                <strong>*</strong>
+                            </label>
+                            <input type="email" id="email" placeholder="exemple@site.com" name="email" value="" required>
+                        </div>
+                    </div>
+                    <div class="ui_doc">
+                        documentation
+                        <div class="hbs">
+                            &#123;&#123;&gt; input-text field1&#125;&#125;
+                        </div>
+                    </div>
+                </section>
+                <ul class="checkbox-list">
+                    <li>
+                        <input id="id1" name="name1" type="checkbox" required value="value1">
+                        <label for="id1">option1
+                            <strong>*</strong>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="id2" name="name2" type="checkbox" required value="value2">
+                        <label for="id2">option2
+                            <strong>*</strong>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="radio-list">
+                    <li>
+                        <input id="radio_id1" name="radio_name1" type="radio" value="value1" required>
+                        <label for="radio_id1">option1</label>
+                    </li>
+                    <li>
+                        <input id="radio_id2" name="radio_name1" type="radio" value="value2" required>
+                        <label for="radio_id2">option2</label>
+                    </li>
+                </ul>
+                <div class="select">
+                    <label for="select_id">label select
+                        <strong>*</strong>
+                    </label>
+                    <select name="select_name" id="select_id" data-errormessage="Veuillez sélectionner ce champ" required class="selectBox">
+                        <option selected value="0">selection 1</option>
+                        <option value="val2">selection 2</option>
+                        <option value="val3">selection 3</option>
+                    </select>
+                </div>
+                <div class="actions">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
+        </div>
+        <!--[if gt IE 8]><!-->
+        <script type="text/javascript" src="/js/lib/jquery.js"></script>
+        <!--<![endif]-->
+        <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/lib/ie/jquery.js"></script>
+    <script type="text/javascript" src="/js/ie/scripts.js"></script>
+    <![endif]-->
+        <!-- doc js -->
+        <script type="text/javascript" src="/_doc/js/prism.min.js"></script>
+        <script type="text/javascript" src="/_doc/js/doc.js"></script>
+        <script type="text/javascript" src="/js/lib/polyfiller.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery.selectBox.js"></script>
+        <script type="text/javascript" src="/js/lib/iso/core.js"></script>
+        <script type="text/javascript" src="/js/lib/iso/forms.js"></script>
+    </body>
+</html>

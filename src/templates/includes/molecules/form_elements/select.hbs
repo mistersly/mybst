@@ -1,0 +1,8 @@
+<div class="select">
+	<label for="{{id}}">{{label}} {{#if required}}<strong>*</strong>{{/if}}</label>
+	<select name="{{name}}" id="{{id}}" data-errormessage="{{errormsg}}" {{#if required}}required{{/if}} {{#if class}}class="{{class}}"{{/if}} {{#if disabled}} disabled{{/if}}>
+		{{#each items}}
+			<option {{#if default}}selected{{/if}} {{#if val}}value="{{val}}"{{/if}}>{{label}}</option>
+		{{/each}}
+	</select>
+</div>

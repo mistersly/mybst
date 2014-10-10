@@ -1,0 +1,66 @@
+.ie8 .checkbox-list, .ie8 .checkbox, .ie7 .checkbox-list, .ie7 .checkbox {
+	span {
+		content:'';
+		@extend %_sprites;
+	}
+}
+
+.ie8 .checkbox-list, .ie8 .checkbox, .ie7 .checkbox-list, .ie7 .checkbox{
+	input{
+		visibility: visible;
+	}
+	li{
+		position:relative;
+	}
+	label {
+		&:before{
+			background:none;
+		}
+		&.checked:before{
+			background:none;
+		}
+		span{
+			@extend %_sprite-box-item-unchecked;
+			position:absolute;
+			z-index:1;
+			display:block;
+			top:0;
+			left:0;
+		}
+		&.checked{
+			span{
+				@extend %_sprite-box-item-checked;
+			}
+		}
+	}
+}
+
+.ie8 .radio-list, .ie7 .radio-list{
+	li{
+		position:relative;
+	}
+	label {
+		&:before,
+		&:after,
+		&.checked:before,
+		&.checked:after{
+			display:none;
+		}
+		span{
+			background:url(/assets/imgs/ie/radio-bg.gif) 0 0 no-repeat;
+			position:absolute;
+			z-index:1;
+			display:block;
+			top:5px;
+			left:0;
+			width:22px;
+			height:22px;
+		}
+		&.checked,
+		&:hover{
+			span{
+				background-position:0 -22px;
+			}
+		}
+	}
+}

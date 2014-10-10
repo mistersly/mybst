@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html lang="fr" class="ie ie7 no-js"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie ie9 no-js"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="{{site.rootprod}}css/main.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="{{site.rootprod}}css/main-ie.css">
+    <![endif]-->
+    <script type="text/javascript" src="{{site.rootprod}}js/lib/modernizr.custom.js"></script>
+  </head>
+  <body>
+      <!-- body partial, used for adding pages to layout -->
+      {{> body }}
+
+    <!--[if gt IE 8]><!-->
+    <script type="text/javascript" src="{{site.rootprod}}js/lib/jquery.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="{{site.rootprod}}js/lib/ie/jquery.js"></script>
+    <script type="text/javascript" src="{{site.rootprod}}js/ie/scripts.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="{{site.rootprod}}js/scripts.js"></script>
+  </body>
+</html>

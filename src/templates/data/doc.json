@@ -1,0 +1,44 @@
+{
+	"forms" : {
+		"fieldset": "fieldset legend",
+		"button" : {
+			"label" : "Envoyer", 
+			"type" : "submit"
+		},
+		"field1" : {
+			"id" : "email",
+			"label" : "votre email",
+			"type" : "email",
+			"placeholder" : "exemple@site.com",
+			"name" : "email",
+			"maxlength" : "",
+			"pattern" : "",
+			"required" : true
+		},
+		"options" : {
+			"list" : [
+				{"name" : "name1", "id" : "id1", "label" : "option1", "val" : "value1", "required" : true},
+				{"name" : "name2", "id" : "id2", "label" : "option2", "val" : "value2", "required" : true}
+			]
+		},
+		"choices" : {
+			"radios" : [
+				{"name" : "radio_name1", "id" : "radio_id1", "label" : "option1", "val" : "value1", "required" : true},
+				{"name" : "radio_name1", "id" : "radio_id2", "label" : "option2", "val" : "value2", "required" : true}
+			]
+		},
+		"select": {
+			"name" : "select_name",
+			"id" : "select_id",
+			"label" : "label select",
+			"class" : "selectBox",
+			"required" : true,
+			"errormsg" : "Veuillez sélectionner ce champ",
+			"items" : [
+				{"val" : "0", "label" : "selection 1", "default" : true},
+				{"val" : "val2", "label" : "selection 2"},
+				{"val" : "val3", "label" : "selection 3"}
+			]
+		}
+	}
+}

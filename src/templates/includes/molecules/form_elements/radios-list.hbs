@@ -1,0 +1,7 @@
+<ul class="radio-list">
+	{{#each radios}}
+		<li>
+			<input id="{{id}}" name="{{name}}" type="radio" value="{{val}}" {{#if checked}}checked{{/if}} {{#if required}}required{{/if}}><label for="{{id}}">{{label}}</label>
+		</li>
+	{{/each}}
+</ul>

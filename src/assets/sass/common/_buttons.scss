@@ -1,0 +1,35 @@
+/* buttons */
+.border_radius {
+     /*@include css3(transition, 0.5s);*/
+	 border-radius:8px;
+}
+button, .button {
+	display:inline-block;
+	text-decoration:none;
+	border:0;
+}
+button:hover, .button:hover{
+	background:$form_bg_button_hover;
+}
+.button-product,
+.button-link-type1 {
+	background:$form_bg_button;
+	color:$form_text_button;	
+}
+.button-product-type1,
+.button-link-type1 { /* Bouton En savoir plus */
+	height:32px;
+	line-height:32px;
+}
+
+.button-link {
+	padding: 0 36px 0 9px;   
+	position:relative;
+}
+
+.button-link-type1:after {
+	position:absolute;
+	right:20px; top:50%;
+	margin-top:-3px;
+//	@include sprite-arrow-white-right();
+}

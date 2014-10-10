@@ -1,0 +1,8 @@
+<ul class="checkbox-list">
+
+	{{#each list}}
+		<li>
+			<input id="{{id}}" name="{{name}}" type="checkbox" {{#if required}}required{{/if}} value="{{val}}" {{#if checked}}checked{{/if}}><label for="{{id}}">{{{label}}} {{#if required}} <strong>*</strong> {{/if}}</label>
+		</li>
+	{{/each}}
+</ul>

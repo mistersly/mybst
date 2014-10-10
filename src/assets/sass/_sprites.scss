@@ -1,0 +1,80 @@
+$spriteWidth: 234;
+$spriteHeight: 188;
+$spriteWidthPx: 234px;
+$spriteHeightPx: 188px;
+
+
+%_sprites {
+  background-image: url('/imgs/sprites/sprites@1.png?#{$spriteWidth}#{$spriteHeight}');
+  background-repeat: no-repeat;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2) {
+      background-size: round($spriteWidthPx/2) round($spriteHeightPx/2);
+      background-image: url('/imgs/sprites/sprites@2.png?#{$spriteWidth}#{$spriteHeight}');
+  }
+}
+
+
+%_sprite-select-arrow-open{
+  background-position: (-4px/2) (-4px/2);
+  width: (84px/2);
+  height: (76px/2);
+}
+
+%_sprite-select-arrow-close{
+  background-position: (-96px/2) (-4px/2);
+  width: (82px/2);
+  height: (76px/2);
+}
+
+%_sprite-radio-item-checked{
+  background-position: (-4px/2) (-88px/2);
+  width: (48px/2);
+  height: (48px/2);
+}
+
+%_sprite-radio-item-unchecked{
+  background-position: (-60px/2) (-88px/2);
+  width: (48px/2);
+  height: (48px/2);
+}
+
+%_sprite-radio-item-hover{
+  background-position: (-116px/2) (-88px/2);
+  width: (46px/2);
+  height: (46px/2);
+}
+
+%_sprite-box-item-hover{
+  background-position: (-186px/2) (-4px/2);
+  width: (44px/2);
+  height: (44px/2);
+}
+
+%_sprite-radio-item-disabled{
+  background-position: (-186px/2) (-56px/2);
+  width: (42px/2);
+  height: (42px/2);
+}
+
+%_sprite-box-item-checked{
+  background-position: (-4px/2) (-144px/2);
+  width: (40px/2);
+  height: (40px/2);
+}
+
+%_sprite-box-item-disabled{
+  background-position: (-52px/2) (-144px/2);
+  width: (40px/2);
+  height: (40px/2);
+}
+
+%_sprite-box-item-unchecked{
+  background-position: (-100px/2) (-144px/2);
+  width: (40px/2);
+  height: (40px/2);
+}
+
+

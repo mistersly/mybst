@@ -1,0 +1,44 @@
+/*
+ * Represents the main "layout" CSS file
+ */
+
+@import "mixins";
+@import "sprites";
+//@import "media_queries_var";
+
+@import "base";
+
+/* base */
+@import "common/colors";
+@import "common/typos";
+@import "common/all";
+@import "common/grid";
+@import "common/buttons";
+@import "common/forms";
+@import "common/breadcrumb";
+
+
+
+
+/* components */
+// @import "components/jquery.carousel";
+// @import "components/form-signe-up";
+
+
+
+/* media queries */
+
+// @media #{$small-up} { }
+// @media #{$small-only} { }
+
+// @media #{$medium-up} { }
+// @media #{$medium-only} { }
+
+// @media #{$large-up} { }
+// @media #{$large-only} { }
+
+// @media #{$xlarge-up} { }
+// @media #{$xlarge-only} { }
+
+// @media #{$xxlarge-up} { }
+// @media #{$xxlarge-only} { }
