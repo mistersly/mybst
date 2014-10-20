@@ -1,5 +1,7 @@
-(function (css_href,version) {
+(function (css_href,version,timeout) {
       "use strict";
+
+      var timer;
 
       function on(el, ev, callback) {
         if (el.addEventListener) {
@@ -21,11 +23,7 @@
 
       function injectFontsStylesheet() {
         if (!window.localStorage || !window.XMLHttpRequest) {
-          var stylesheet = document.createElement('link');
-          stylesheet.href = css_href;
-          stylesheet.rel = 'stylesheet';
-          stylesheet.type = 'text/css';
-          document.getElementsByTagName('head')[0].appendChild(stylesheet);
+          injectLinkCss(css_href);
 
           document.cookie = "font_css_cache";
 
@@ -33,6 +31,10 @@
           if (fileIsCached(css_href)) {
             injectRawStyle(localStorage.font_css_cache);
           } else {
+            timer = setTimeout(function(){
+              injectLinkCss(css_href);
+            },timeout);
+
             localStorage.clear('font_css_cache');
             localStorage.clear('font_css_cache_file');
             localStorage.clear('font_css_cache_version');
@@ -41,6 +43,7 @@
             xhr.open("GET", css_href, true);
             on(xhr, 'load', function () {
               if (xhr.readyState === 4 && xhr.status === 200) {
+                clearTimeout(timer);
                 injectRawStyle(xhr.responseText);
 
                 localStorage.setItem('font_css_cache', xhr.responseText);
@@ -71,4 +74,4 @@
         document.getElementsByTagName('head')[0].appendChild(css);
       }
 
-    }('css/fonts.css','1.1'));
+    }('/css/fontfaces.css','0.1',2000));
