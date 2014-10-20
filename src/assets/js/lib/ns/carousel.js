@@ -1,5 +1,5 @@
 
-    NSJS.moduleCreate('carousel', function($el, param) {
+    NS.moduleCreate('carousel', function($el, param) {
         var wrap = $el.find('ul:first').addClass('carousel-slider'),
             carousel,
             newParam = {},

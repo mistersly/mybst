@@ -1,12 +1,12 @@
 
-    NSJS.moduleCreate('form', function($el, param) {
+    NS.moduleCreate('form', function($el, param) {
         var $root = $el,
             $inputText = $el.find('input').not('[type=radio], [type=checkbox]'),
             $inputCheckboxList = $el.find('input[type=checkbox]'),
             $inputRadioList = $el.find('input[type=radio]'),
             $textArea = $el.find('textarea'),
             $select = $el.find('select'),
-            isIE8 = NSJS.$htmlTag.hasClass('ie8');
+            isIE8 = NS.$htmlTag.hasClass('ie8');
 
         var checkSelects = function() {
             var test = true;

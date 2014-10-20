@@ -13,26 +13,26 @@ if(formControl){
 }
 
 
-;(function($, win, doc, NSJS) {
+;(function($, win, doc, NS) {
 
     var testMsGesture = window.navigator.pointerEnabled;
 
     var objs = {}, storeList = [];
 
-    NSJS.$htmlTag = $('html').addClass('js').removeClass('js-notready');
-    NSJS.$doc = $(doc);
-    NSJS.$win = $(win);
-    NSJS.$body = $('body');
+    NS.$htmlTag = $('html').addClass('js').removeClass('js-notready');
+    NS.$doc = $(doc);
+    NS.$win = $(win);
+    NS.$body = $('body');
 
-    if (NSJS.$htmlTag.hasClass('csstransitions')){
+    if (NS.$htmlTag.hasClass('csstransitions')){
         jQuery.fx.off = true;
     }
 
-    NSJS.moduleCreate = function(name, obj) {
+    NS.moduleCreate = function(name, obj) {
         objs[name] = obj;
     };
 
-    NSJS.storeObj =  function(obj, id, callback){
+    NS.storeObj =  function(obj, id, callback){
       if(obj.id === undefined && id !== undefined){
         obj.id = id;
       }
@@ -41,7 +41,7 @@ if(formControl){
       return obj;
     }
 
-    NSJS.getStoreObj =  function(id){
+    NS.getStoreObj =  function(id){
       for(var i = 0, lng = storeList.length; i < lng; i++){
         if(storeList[i].id === id){
           return storeList[i];
@@ -49,7 +49,7 @@ if(formControl){
       }
     }
 
-    NSJS.destroyObj = function(id){
+    NS.destroyObj = function(id){
       var arr = [];
       for(var i = 0, lng = storeList.length; i < lng; i++){
         if(storeList[i].id === id && storeList[i].destroy){
@@ -61,7 +61,7 @@ if(formControl){
       storeList = arr;
     }
 
-    NSJS.control = function() {
+    NS.control = function() {
         var listObjs = [];
 
         var init = function (content) {
@@ -116,8 +116,8 @@ if(formControl){
     }();
 
     $(function() {
-        NSJS.control.init();
+        NS.control.init();
     });
 
 
-})(jQuery, window, document, window.NSJS = window.NSJS || {});
+})(jQuery, window, document, window.NS = window.NS || {});
