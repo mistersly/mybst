@@ -27,4 +27,10 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
-.DS_Store
+*.DS_Store
+
+### Sass ###
+.sass-cache
+
+# Bower Vendor
+src/vendor/
